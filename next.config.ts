@@ -1,17 +1,15 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: false // Disable App Router
-  },
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, 'src')
+      '@': path.resolve(__dirname, 'src'),
     };
     return config;
-  }
+  },
 };
 
 export default nextConfig;
