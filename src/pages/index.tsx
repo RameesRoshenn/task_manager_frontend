@@ -2,6 +2,7 @@ import { gql, useQuery } from '@apollo/client';
 import TaskForm from '../components/TaskForm';
 import TaskCard from '../components/TaskCard';
 import { useState } from 'react';
+import type { Task } from '@/types/task'; // ✅ Import the Task type
 
 const GET_TASKS = gql`
   query GetTasks($status: String) {
@@ -27,9 +28,9 @@ export default function Home() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-8">Task Manager</h1>
-      
+
       <TaskForm onTaskAdded={refetch} />
-      
+
       <div className="mb-6">
         <select
           value={statusFilter}
@@ -42,7 +43,7 @@ export default function Home() {
           <option value="Done">Done</option>
         </select>
       </div>
-      
+
       <div className="space-y-4">
         {data?.tasks?.map((task: Task) => (
           <TaskCard key={task.id} task={task} refetch={refetch} />
