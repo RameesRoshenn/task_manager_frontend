@@ -1,0 +1,105 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.loading,
+.error,
+.notFound {
+  padding: 2rem;
+  text-align: center;
+}
+
+.error {
+  color: #e53e3e;
+}
+
+.backLink {
+  display: inline-block;
+  color: #3182ce;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.taskContainer {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.taskTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0;
+}
+
+.description {
+  margin: 2rem 0;
+  line-height: 1.6;
+  color: black;
+  font-weight: bolder;
+}
+
+.description h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.detailLabel {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+}
+
+.detailValue {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+/* Status Styles */
+.statusBadge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.statusTodo {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.statusInProgress {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.statusDone {
+  background-color: #c6f6d5;
+  color: #276749;
+}

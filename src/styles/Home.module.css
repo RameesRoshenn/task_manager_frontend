@@ -1,0 +1,53 @@
+.taskCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.taskCard:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.taskTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e1e3e8;
+  cursor: pointer;
+}
+
+.taskTitle:hover {
+  color: #3182ce;
+  text-decoration: underline;
+}
+
+.dueDate {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+/* Status classes */
+.statusTodo {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.statusInProgress {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.statusDone {
+  background-color: #c6f6d5;
+  color: #276749;
+}
